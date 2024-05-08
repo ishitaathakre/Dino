@@ -17,7 +17,7 @@ model_config_path = "config/DINO/DINO_4scale.py"
 
 
 #Put model path here.
-model_checkpoint_path = "" # change the path of the model checkpoint
+model_checkpoint_path = "../../input/dino_trained/pytorch/dino/1/dino.pth" # change the path of the model checkpoint
 
 args = SLConfig.fromfile(model_config_path) 
 args.device = 'cuda' 
@@ -30,7 +30,7 @@ _ = model.eval()
 # dataset_val = build_dataset(image_set='val', args=args)
 
 #Put images path here.   
-coco_path = ""
+coco_path = "../../input/cocodataset/coco_1k"
 
 parent_dir_path = os.path.dirname(coco_path)
 
